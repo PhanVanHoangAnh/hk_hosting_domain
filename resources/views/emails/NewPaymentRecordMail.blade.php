@@ -1,0 +1,2 @@
+<h2>Thông báo: có phiếu thu mới</h2>
+<p>{{ "Quý khách đã có phiếu thu số " . $paymentRecord->id . ", số tiền " . \App\Helpers\Functions::formatNumber($paymentRecord->amount) . "đ, hợp đồng " . trans('messages.order.type.' . $order->type) . ", mã: " . $order->code . " ngày " . $order->order_date . " với Công ty CPGD American Study" }}</p>

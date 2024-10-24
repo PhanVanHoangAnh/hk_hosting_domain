@@ -1,0 +1,5 @@
+#!/bin/bash
+php artisan app:drop-all-tables
+php composer.phar install
+php artisan migrate:refresh
+php artisan db:seed

@@ -1,0 +1,15 @@
+#!/bin/bash
+ssh asms-cloud bash <<EOF
+echo '++++++ Go to app dir ...'
+cd ~/dev
+
+echo '++++++ Pull newest code from origin/develop ...'
+git pull
+
+echo '++++++ Run composer install ...'
+php composer.phar install
+
+echo '++++++ Run migrate ...'
+php artisan migrate
+
+EOF

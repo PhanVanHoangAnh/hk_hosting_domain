@@ -1,0 +1,22 @@
+#!/bin/bash
+
+echo '\033[0;31mPush current develop to repos\033[0m'
+git push
+
+echo '\033[0;31mCheckout to prod branch\033[0m'
+git checkout prod
+
+echo '\033[0;31mUpdate prod branch\033[0m'
+git pull
+
+echo '\033[0;31mMerge origin/develop\033[0m'
+git merge origin/develop
+
+echo '\033[0;31mPush to origin/prod\033[0m'
+git push
+
+echo '\033[0;31mCheckout back to develop branch\033[0m'
+git checkout develop
+
+echo '\033[0;31mRun update prod server srcipt\033[0m'
+source batch/.update-prod

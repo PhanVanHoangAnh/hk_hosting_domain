@@ -1,0 +1,5 @@
+#!/bin/bash
+php composer.phar install
+php artisan app:drop-all-tables
+php artisan migrate:refresh
+php artisan db:seed --class=ProductionSeeder

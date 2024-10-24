@@ -1,0 +1,60 @@
+<?php
+
+namespace App\Notifications;
+
+use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Notifications\Notification;
+
+class TVCLStudentAssignmentNotification extends Notification
+{
+    use Queueable;
+
+    public $abroadApplication;
+    /**
+     * Create a new notification instance.
+     */
+    public function __construct($abroadApplication)
+    {
+        $this->abroadApplication = $abroadApplication;
+    }
+
+    /**
+     * Get the notification's delivery channels.
+     *
+     * @return array<int, string>
+     */
+    public function via(object $notifiable): array
+    {
+        return ['database'];
+    }
+
+    /**
+     * Get the mail representation of the notification.
+     */
+    public function toMail(object $notifiable): MailMessage
+    {
+        return (new MailMessage)
+                    ->line('The introduction to the notification.')
+                    ->action('Notification Action', url('/'))
+                    ->line('Thank you for using our application!');
+    }
+
+    /**
+     * Get the array representation of the notification.
+     *
+     * @return array<string, mixed>
+     */
+    public function toArray(object $notifiable): array
+    {
+        $account = $this->abroadApplication->account1;
+        $user = $account->users->first();
+        $phone = $user->phone ?? '--';
+        $email = $user->email ?? '--';
+
+        return [
+            'message' => "Hồ sơ ". trans('messages.order.type.' . $this->abroadApplication->orderItem->type) . " của học viên {$this->abroadApplication->student->name} đã được bàn giao cho nhân viên du học {$account->name}, sđt liên hệ: {$phone}, email: {$email}.",
+        ];
+    }
+}

@@ -1,0 +1,15 @@
+feat: update help methods in source data feature
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch dev-new-source-type
+# Your branch is ahead of 'origin/dev-new-source-type' by 1 commit.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#	modified:   app/Helpers/Functions.php
+#	new file:   app/Helpers/SourceDataFunctions.php
+#	renamed:    app/Http/Controllers/SourceDataMangerController.php -> app/Http/Controllers/SourceDataManagerController.php
+#	modified:   resources/views/generals/contact_requests/_auto_form.blade.php
+#	modified:   resources/views/generals/contact_requests/_source_data_manager.blade.php
+#

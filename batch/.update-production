@@ -1,0 +1,15 @@
+#!/bin/bash
+ssh hk-server-asms bash <<EOF
+echo '++++++ Go to app dir ~/prod...'
+cd ~/prod
+
+echo '++++++ Pull newest code from origin/demo ...'
+git pull
+
+echo '++++++ Run composer install/demo ...'
+php composer.phar install
+
+echo '++++++ Run migrate ...'
+php artisan migrate
+
+EOF

@@ -1,0 +1,42 @@
+#anotify {
+    position: fixed;
+    bottom: 0px;
+    right: 20px;
+    z-index: 100000000;
+}
+#anotify .alert {
+    width: 350px;
+    padding: 10px 10px 10px 40px;
+}
+#anotify .alert::before {
+    content: 'notifications';
+    margin-left: -27px;
+    top: 11px;   
+    font-family: 'Material Symbols Rounded';
+    float: left;
+}
+#anotify .alert-dismissible .btn-close {
+    padding: 10px;
+    background-size: 0.6em;
+    border-radius: 100%;
+    top: -9px;
+    right: -9px;
+    background-color: #fff;
+    opacity: 0.9;
+    padding: 4px;
+    border: saddlebrown;
+    border: solid 1px #ddd;
+    display: none;
+}
+#anotify .alert-dismissible:hover .btn-close {
+    display: block;
+}
+#anotify .alert-warning::before {
+    content: 'error_outline';
+}
+#anotify .alert-success::before {
+    content: 'check_circle';
+}
+#anotify .alert-danger::before {
+    content: 'new_releases';
+}

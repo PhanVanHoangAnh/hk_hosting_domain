@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo '\033[0;31mPush current develop to repos\033[0m'
+git checkout develop
+git pull
+git push
+
+echo '\033[0;31mPush to origin/develop\033[0m'
+git push
+
+echo '\033[0;31mRun update dev server srcipt\033[0m'
+source batch/.update-dev
