@@ -23,7 +23,9 @@
         </div>
         <div class="col-md-6">
             <div class="text-center">
-                <img src="/hk/site/assets/img/hosting.jpg" alt="Image" class="img-fluid rounded shadow-lg">
+                <img src="<?php echo home_url(); ?>/wp-content/uploads/2024/10/hosting.jpg" alt="Image" class="img-fluid rounded shadow-lg">
+
+
             </div>
         </div>
     </div>

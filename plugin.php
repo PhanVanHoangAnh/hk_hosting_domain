@@ -12,25 +12,30 @@
  # getResponse function
 function hk_getResponse($path=null) // 'login', 'edu/courses', '/hello'
 {
-    require __DIR__.'/vendor/autoload.php';
-    $app = require_once __DIR__.'/bootstrap/app.php';
-    $hk_kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
+    if (!class_exists('\App\Models\User')) {
+        require __DIR__.'/vendor/autoload.php';
+        $app = require_once __DIR__.'/bootstrap/app.php';
+        $hk_kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
 
-    if (!$path) {
-        $path = isset($_REQUEST['path']) ? $_REQUEST['path'] : '/dashboard';
+        if (!$path) {
+            $path = isset($_REQUEST['path']) ? $_REQUEST['path'] : '/dashboard';
+        }
+        $response = $hk_kernel->handle(
+            App\Wordpress\LaravelRequest::capture($path)
+        );
+            
+        return $response;
     }
-    $response = $hk_kernel->handle(
-        App\Wordpress\LaravelRequest::capture($path)
-    );
-        
-    return $response;
 }
 
 function my_custom_shortcode($atts) {
     // auto load laravel framework
-    hk_getResponse('/');
+    
+        
+        hk_getResponse('/');
+              
+        $atts = shortcode_atts(
 
-    $atts = shortcode_atts(
         array(
             'page' => 'main',  
         ),
@@ -38,16 +43,21 @@ function my_custom_shortcode($atts) {
         'my_custom'
     );
 
+    $custom_css = '<style>#site-preloader { display: none !important; }</style>';
+
     switch ($atts['page']) {
         case 'hosting':
-            $html = view('hk.hosting.index')->render();
+            $html = view('hk.hosting.index')->render(); 
+            $html .= $custom_css; 
             break;
         case 'domain':
-            $html = view('hk.domain.index')->render();
+            $html = view('hk.domain.index')->render();  
+            $html .= $custom_css;
             break;
         case 'main':
         default:
-            $html = view('hk.main.index')->render();
+            $html = view('hk.main.index')->render();  
+            $html .= $custom_css; 
             break;
     }
 

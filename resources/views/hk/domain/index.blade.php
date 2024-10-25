@@ -335,14 +335,15 @@
             </ul>
         </div>
         <div class="col-md-6">
-            <img src="/hk/site/assets/img/domain/choose_domain.png" class="img-fluid rounded shadow-sm" alt="Domain Name Tips Image">
+            <img src="<?php echo home_url(); ?>/wp-content/uploads/2024/10/choose_domain.jpg" alt="Image" class="img-fluid rounded shadow-lg">
+            
         </div>
     </div>
 
     <!-- Website Building Form Section -->
     <div class="row my-5 align-items-center">
         <div class="col-md-6">
-            <img src="/hk/site/assets/img/domain/buid_web.svg" class="img-fluid rounded shadow-sm" alt="Website Building Image">
+            <img src="<?php echo home_url(); ?>/wp-content/uploads/2024/10/buid_web.jpg" alt="Image" class="img-fluid rounded shadow-lg">
         </div>
         <div class="col-md-6">
             <h4 class="text-primary fw-bold">Bạn Cần Xây Dựng Website?</h4>
