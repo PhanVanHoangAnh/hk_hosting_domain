@@ -1,7 +1,7 @@
 <?php
 /**
  * @wordpress-plugin
- * Plugin Name:       HK
+ * Plugin Name:       HK 2
  * Plugin URI:        https://hoangkhang.com.vn
  * Description:       HK Plugin for WordPress
  * Version:           @VERSION
@@ -25,6 +25,36 @@ function hk_getResponse($path=null) // 'login', 'edu/courses', '/hello'
         
     return $response;
 }
+
+function my_custom_shortcode($atts) {
+    // auto load laravel framework
+    hk_getResponse('/');
+
+    $atts = shortcode_atts(
+        array(
+            'page' => 'main',  
+        ),
+        $atts,
+        'my_custom'
+    );
+
+    switch ($atts['page']) {
+        case 'hosting':
+            $html = view('hk.hosting.index')->render();
+            break;
+        case 'domain':
+            $html = view('hk.domain.index')->render();
+            break;
+        case 'main':
+        default:
+            $html = view('hk.main.index')->render();
+            break;
+    }
+
+    return $html;
+}
+add_shortcode('my_custom', 'my_custom_shortcode');
+
 
 
 function my_custom_menu() {
