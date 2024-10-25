@@ -83,7 +83,5 @@ Route::middleware('guest')->group(function () {
 
     //MainPage
     Route::get('hk/main', [MainPageController::class, 'index']); 
-
-
 });
 

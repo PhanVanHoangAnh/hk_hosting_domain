@@ -30,41 +30,6 @@ use Arcanedev\LogViewer\Http\Controllers\LogViewerController;
 
 // public
 Route::get('/under-construction', [Controller::class, 'underConstruction']);
-// auth
-require __DIR__ . '/auth.php';
-
-// General
-require __DIR__ . '/general.php';
-
-// Sales
-require __DIR__ . '/sales.php';
-
-// Accounting
-require __DIR__ . '/accounting.php';
-
-// Marketing
-require __DIR__ . '/marketing.php';
-
-// edu
-require __DIR__ . '/edu.php';
-
-// abroad
-require __DIR__ . '/abroad.php';
-
-// extracurricular
-require __DIR__ . '/extracurricular.php';
-
-// system
-require __DIR__ . '/system.php';
-
-// student
-require __DIR__ . '/student.php';
-
-// Note Logs
-require __DIR__ . '/noteLog.php';
-
-// teacher
-require __DIR__ . '/teacher.php';
 
 // hk
 require __DIR__ . '/hk.php';
