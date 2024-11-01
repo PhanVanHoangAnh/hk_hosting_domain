@@ -17,7 +17,7 @@
                 <div class="card shadow-sm py-4 border border-dark rounded">
                     <div class="card-body">
                         <a href="{{ action([App\Http\Controllers\Hk\HostingController::class, 'index']) }}" style="text-decoration: none;">
-                            <i class="bi bi-headset fs-1 text-primary"></i>
+                            {{-- <i class="bi bi-headset fs-1 text-primary"></i> --}}
                             <h3 class="fw-bold mt-3 text-primary">Web Hosting</h3>
                             <p class="fw-bold text-dark text-center">Phù hợp lưu trữ website.</p>
                         </a>
@@ -28,7 +28,7 @@
                 <div class="card shadow-sm py-4 border border-dark rounded">
                     <div class="card-body">
                         <a href="{{ action([App\Http\Controllers\Hk\HostingController::class, 'index']) }}" style="text-decoration: none;">
-                            <i class="bi bi-gear fs-1 text-primary"></i>
+                            {{-- <i class="bi bi-gear fs-1 text-primary"></i> --}}
                             <h3 class="fw-bold mt-3 text-primary">Cloud Hosting</h3>
                             <p class="fw-bold text-dark text-center">Phù hợp cho sự án vừa và lớn.</p>
                         </a>                        
@@ -38,7 +38,7 @@
             <div class="col-md-4">
                 <div class="card shadow-sm py-4 border border-dark rounded">
                     <div class="card-body">
-                        <i class="bi bi-patch-check fs-1 text-primary"></i>
+                        {{-- <i class="bi bi-patch-check fs-1 text-primary"></i> --}}
                         <h3 class="fw-bold mt-3 text-primary">VPS</h3>
                         <p class="fw-bold text-dark text-center">Môi trường riêng biệt.</p>
                     </div>
