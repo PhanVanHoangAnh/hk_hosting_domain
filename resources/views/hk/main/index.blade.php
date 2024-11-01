@@ -7,7 +7,7 @@
         <div class="row text-center mb-2">
             <div class="col-md-12 mb-5">
                 <h2 class="display-5 font-weight-bold text-uppercase letter-spacing">Lưu trữ chuyên nghiệp</h2>
-                <p class="fs-5 fst-italic fw-bolder mb-0">Lựa chọn dịch vụ phù hợp với doanh nghiệp bạn</p>
+                <p class="fs-5 fst-italic fw-bolder text-center mb-0">Lựa chọn dịch vụ phù hợp với doanh nghiệp bạn</p>
             </div>
         </div>
 
@@ -19,7 +19,7 @@
                         <a href="{{ action([App\Http\Controllers\Hk\HostingController::class, 'index']) }}" style="text-decoration: none;">
                             <i class="bi bi-headset fs-1 text-primary"></i>
                             <h3 class="fw-bold mt-3 text-primary">Web Hosting</h3>
-                            <p class="fw-bold text-dark">Phù hợp lưu trữ website.</p>
+                            <p class="fw-bold text-dark text-center">Phù hợp lưu trữ website.</p>
                         </a>
                     </div>
                 </div>
@@ -30,7 +30,7 @@
                         <a href="{{ action([App\Http\Controllers\Hk\HostingController::class, 'index']) }}" style="text-decoration: none;">
                             <i class="bi bi-gear fs-1 text-primary"></i>
                             <h3 class="fw-bold mt-3 text-primary">Cloud Hosting</h3>
-                            <p class="fw-bold text-dark">Phù hợp cho sự án vừa và lớn.</p>
+                            <p class="fw-bold text-dark text-center">Phù hợp cho sự án vừa và lớn.</p>
                         </a>                        
                     </div>
                 </div>
@@ -40,7 +40,7 @@
                     <div class="card-body">
                         <i class="bi bi-patch-check fs-1 text-primary"></i>
                         <h3 class="fw-bold mt-3 text-primary">VPS</h3>
-                        <p class="fw-bold text-dark">Môi trường riêng biệt.</p>
+                        <p class="fw-bold text-dark text-center">Môi trường riêng biệt.</p>
                     </div>
                 </div>
             </div>
@@ -112,7 +112,7 @@
         <!-- Call to Action -->
         <div class="container">
             <div class="custom-container d-flex justify-content-between align-items-center">
-                <h3 class="display-6 mb-0">Chúng Tôi Sẽ Giúp Bạn Chọn Gói Phù Hợp Nhất</h3>
+                <h3 class="display-6 mb-0" style="color: white;">Chúng Tôi Sẽ Giúp Bạn Chọn Gói Phù Hợp Nhất</h3>
                 <button class="custom-button" onclick="alert('Đang tư vấn ngay!')">Tư Vấn Ngay</button>
                 <!-- Thay <a> bằng <button> -->
             </div>
